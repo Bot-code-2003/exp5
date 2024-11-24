@@ -1,0 +1,15 @@
+<div style="text-align: center; margin: 20px">
+  <h2>To-Do List</h2>
+
+  <!-- Input and Add Button -->
+  <input type="text" [(ngModel)]="newTask" placeholder="Enter a task" />
+  <button (click)="addTask()">Add</button>
+
+  <!-- Display the To-Do List -->
+  <ul style="list-style: none; padding: 0">
+    <li *ngFor="let task of tasks; let i = index">
+      {{ task }}
+      <button (click)="deleteTask(i)" style="margin-left: 10px">Delete</button>
+    </li>
+  </ul>
+</div>
